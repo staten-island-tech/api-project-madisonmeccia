@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: 'Aboreto', cursive;
+  color: midnightblue;
+}
+
+h1 {
+  font-size: 2.2em;
+  line-height: 1.1;
+  margin-bottom: 30rem;
+  display: flex;align-items: center;justify-content: center;flex-direction: column; width: 100%; text-align: center;
+}
+
+h2{
+  display: flex;align-items: center;justify-content: center;flex-direction: column; width: 100%; text-align: center;
+  margin-right: 5rem;
+}
+:root {
+    
+  --darker-red: rgb(144, 17, 140); 
+  --red: rgb(149, 189, 238);
+  --light-red: rgb(255, 100, 206);
+  --orange-red: rgb(101, 73, 229);
+  --beige: rgb(197, 114, 212);
+  --grey: rgb(205, 180, 219);
+  --black: black;
+
+
+  --darker-blue: rgb(155, 107, 227);
+  --dark-blue: rgb(175, 90, 149);
+  --blue: rgb(183, 54, 174);
+  --light-blue: rgb(53,217,245);
+  --white: rgb(240,240,240);
+  color-scheme: light dark;
+}
+html,
+body
+{
+  background-color: lightpink;
+}
+
+.light {
+  background-color: rgb(183, 118, 204);
+  color: aliceblue;
+}
+
+.dark {
+  background-color: rgba(147, 105, 238, 0.469);
+  color: black;
+}
+.show {
+ background-color: black;
+  box-sizing: border-box;
+  color: lightpink;
+  border-color: plum;
+  border-style: dotted;
+  border-radius: 2rem;
+  font-size: 15px;
+  margin-left: 60rem;
+  margin-bottom: 25rem;
+  padding: 25px 30px;
+ position: absolute;
+}
+
+.show:hover {
+  background-color: black;
+  color: fuchsia;
+ cursor: grab;
+ transform: scale(1);
+ font-size: large;
+ border-style: dotted;
+ border-color: fuchsia;
+}
+
+.show:before {
+  background-color: var(--button-color1);
+  content: "";
+  position: absolute;
+  border-radius: 2rem;
+  transition: background-color 400ms ease-in;
+  width: 100%;
+  z-index: -1;
+}
+
+.show:hover:before {
+  background-color: var(--button-color2);
+}
