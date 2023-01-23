@@ -12,7 +12,7 @@ async function getData(URL) {
   }
 }
 getData(URL);
-document.querySelector(".btn").addEventListener("click", function () {
+document.querySelector(".show").addEventListener("click", function () {
   if (document.body.classList.contains("light")) {
     document.body.classList.add("dark");
     document.body.classList.remove("light");
