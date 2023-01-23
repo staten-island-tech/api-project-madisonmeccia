@@ -65,5 +65,11 @@ body
 }
 .pte{
   width: 2rem;
-  margin-right: 50rem;
+  margin-right: 45rem;
+  margin-top: 20rem;
+}
+ @keyframes pte {
+to{
+  transform: scale(1.1);
+}
 }
