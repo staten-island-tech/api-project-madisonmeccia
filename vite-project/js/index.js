@@ -1,12 +1,12 @@
 import "../css/style.css";
-const URL = "https://api.kanye.rest";
+const URL = "mkwiiapi.com/api/v1/characters/22";
 let theme = "light";
 
 async function getData(URL) {
   try {
     const response = await fetch(URL);
     const data = await response.json(); // makes the data into JSON object we can actually use
-    document.getElementById("api-response").textContent = data.quote;
+    console.log(data);
   } catch (error) {
     console.log(error);
   }
