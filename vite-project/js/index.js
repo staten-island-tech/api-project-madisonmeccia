@@ -10,29 +10,20 @@ async function getData(URL) {
       console.log(response.status);
       throw error(response);
     } else {
-      const response = await fetch(URL);
       const data = await response.json();
       console.log(data);
-      let name = DOMSelectors.name.value;
-      data
-        .filter((el) => el.name === `${name}`)
-        .forEach((el) => {
-          DOMSelectors.display.insertAdjacentHTML(
-            "beforeend",
-            `<div>
-              <img class="img" src="${el.image}" alt="picture of Daniel Radcliff as Harry Potter">    
-            </div>`
-          );
-        });
+      run(data);
     }
   } catch (error) {
     console.log(error);
   }
 }
+getData(URL);
+function run(data) {
+  const Array = Array.from(data[0]);
+  console.log(Array);
+}
+
 DOMSelectors.btn.addEventListener("click", function () {
   console.log();
 });
-
-getData(URL);
-
-const alt = {};
