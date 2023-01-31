@@ -1,62 +1,43 @@
 import "../css/style.css";
-
 import { DOMSelectors } from "./DOM.js";
 
 const URL = "https://hp-api.onrender.com/api/characters";
 
-async function getData(URL)
+async function getData(URL) {
+  try {
+    const response = await fetch(URL);
 
-try {
+    if (response.status < 200 || response.status > 299) {
+      console.log(response.status);
 
-const response = await fetch(URL);
+      throw error(response);
+    } else {
+      const data = await response.json();
 
-if (response. status < 200 || response.status > 299) {
+      console.log(data);
 
-console.log(response.status);
+      let name = DOMSelectors.name.value;
 
-throw error(response);
+      data
+        .filter((el) => el.name.value === "${el.name}")
 
-} else {
-
-const response = await fetch(URL) ;
-
-const data = await response. json();
-
-console.log(data);
-
-let name = DOMSelectors.name.value;
-
-data.filter((el) => el.name === '${name}')
-
-.forEach((el) => {
-
-DOMSelectors.display.insertAdjacentHTML(
-
-"beforeend",
-`<div>
+        .forEach((el) => {
+          DOMSelectors.display.insertAdjacentHTML(
+            "beforeend",
+            `<div>
 
 <img class="img" src="${el.image}" alt="picture of Daniel Radcliff as Harry Potter">
 
 </div>`
-
-);
-
-});
-
+          );
+        });
+    }
+  } catch (error) {
+    console.log(error);
+  }
 }
-
-}  catch (error) {
-
-console.log(error);
-
-}
-
 DOMSelectors.btn.addEventListener("click", function () {
-
-console.log();
-
+  console.log();
 });
 
-
-
-getData (URL);
+getData(URL);
