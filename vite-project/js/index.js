@@ -3,8 +3,7 @@ import { DOMSelectors } from "./DOM.js";
 
 const URL = "https://hp-api.onrender.com/api/characters";
 
-async function getData() {
-  DOMSelectors.display.innerHTML = "";
+async function getData(URL) {
   try {
     const response = await fetch(URL);
     if (response.status < 200 || response.status > 299) {
@@ -31,7 +30,9 @@ async function getData() {
   }
 }
 DOMSelectors.btn.addEventListener("click", function () {
-  console.log("hello");
+  console.log();
 });
 
-getData();
+getData(URL);
+
+const alt = {};
