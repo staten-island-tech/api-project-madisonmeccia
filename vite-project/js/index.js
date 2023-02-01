@@ -39,8 +39,19 @@ async function getData(URL) {
     console.log(error);
   }
 }
+
 DOMSelectors.btn.addEventListener("click", function () {
   getPicture();
 });
 
 getData(URL);
+
+document.querySelector(".btn").addEventListener("click", function () {
+  if (document.body.classList.contains("light")) {
+    document.body.classList.add("dark");
+    document.body.classList.remove("light");
+  } else {
+    document.body.classList.add("light");
+    document.body.classList.remove("dark");
+  }
+});
