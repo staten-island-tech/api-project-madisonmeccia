@@ -1,7 +1,7 @@
 *,
 html,
 body {
-    background-color: transparent;
+    background-color:  rgb(183, 176, 231);
     font-family: 'creepster', cursive;
     padding: 0;
     margin: 0;
@@ -64,29 +64,7 @@ body {
     border-radius: 3rem;
     box-shadow: 0 7px 6rem rgb(0, 0, 0) ;
 }
-.light {
-    background-color: rgb(207, 148, 227);
-}
 
-.dark {
-    background-color: rgb(183, 176, 231);
-}:root {
-    
-    --darker-red: rgb(144, 17, 140); 
-    --red: rgb(149, 189, 238);
-    --light-red: rgb(255, 100, 206);
-    --orange-red: rgb(101, 73, 229);
-    --beige: rgb(197, 114, 212);
-    --grey: rgb(205, 180, 219);
-    --black: black;
-
-
-    --darker-blue: rgb(155, 107, 227);
-    --dark-blue: rgb(175, 90, 149);
-    --blue: rgb(183, 54, 174);
-    --light-blue: rgb(53,217,245);
-    --white: rgb(240,240,240);
-}
 .btn,
 .btn:link,
 .btn:visited{
