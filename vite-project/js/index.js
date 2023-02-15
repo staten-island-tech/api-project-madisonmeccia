@@ -38,12 +38,22 @@ async function getData(URL) {
       throw error(response);
     } else {
       data = await response.json();
+      setupSelect();
     }
   } catch (error) {
     console.log(error);
   }
 }
-
+function setupSelect() {
+  const select = DOMSelectors.name;
+  data.forEach((person) => {
+    if (person.image && person.image !== "") {
+      const option = document.createElement("option");
+      option.text = person.name;
+      select.add(option);
+    }
+  });
+}
 DOMSelectors.btn.addEventListener("click", function () {
   getPicture();
 });
