@@ -21,8 +21,9 @@ function getPicture() {
         "beforeend",
         `<div id="imagecontainer">
 
-<img class="img" src="${el.image}" .forEach((img)=> 
-alt="pictue of slected character in Hogwarts uniform">
+<img class="img" src="${el.image}" 
+.forEach((img)=> 
+alt="pictue of selected character in Hogwarts uniform">
 </div>`
       );
     });
