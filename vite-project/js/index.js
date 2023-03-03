@@ -21,12 +21,14 @@ function getPicture() {
         "beforeend",
         `<div id="imagecontainer">
 
-<img class="img" src="${el.image}" alt="picture of Daniel Radcliff as Harry Potter">
-
+<img class="img" src="${el.image}" 
+.forEach((img)=> 
+alt="pictue of selected character in Hogwarts uniform">
 </div>`
       );
     });
 }
+
 //global-can be seen anywhere, local- only defined in function
 async function getData(URL) {
   try {
